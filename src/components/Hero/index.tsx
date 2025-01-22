@@ -1,4 +1,4 @@
-
+import { useEffect, useState } from "react"
 import appLogo from "../../assets/appLogo.svg"
 import instagram from "../../assets/icons/instagram.png"
 import facebook from "../../assets/icons/facebook.png"
@@ -7,11 +7,20 @@ import whiteStar from "../../assets/icons/white-star.svg"
 import heroPattern from "../../assets/hero-pattern.png"
 import hamburger from "../../assets/harmbuger.svg"
 import mobileLogo from "../../assets/mobileLogo.svg"
-import { useState } from "react"
 
 export default function Hero(): JSX.Element {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState<boolean>(false);
   const handleClick = () => setMenuOpen(!menuOpen);
+  const texts = ["Asap!", "Now! Now!", "as e dey hot!", "Kia Kia!"]
+  const [currentTextIndex, setCurrentTextIndex] = useState<number>(0)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTextIndex((prevIndex) => (prevIndex + 1) % texts.length)
+    }, 3000)
+    return () => clearInterval(interval)
+  }, [texts.length])
+
   return (
     <div className='w-full h-screen px-2  py-4'>
       <div className="w-full py-4 px-3 bg-white shadow-sm block md:hidden">
@@ -71,7 +80,14 @@ export default function Hero(): JSX.Element {
               <img src={whiteStar} alt="whiteStar" />
             </div>
 
-            <h1 className='text-5xl md:text-7xl font-semibold text-chow-white'>Find chow, <span className='text-chow-green font-courgette'>Asap!</span></h1>
+            <h1 className='text-5xl md:text-7xl font-semibold text-chow-white'>Find chow, {" "}
+              <span
+                className="text-chow-green font-courgette relative after:absolute after:left-0 after:bottom-0 after:h-1 after:w-full after:bg-chow-orange after:rounded-full"
+                style={{ display: "inline-block", position: "relative" }}
+              >
+                {texts[currentTextIndex]}
+              </span>
+            </h1>
             <p className='text-chow-white text-center leading-relaxed text-base w-80 '>The patient dog eats left overs. Be the first to know when we launch. Join our Waitlist 😎</p>
 
             <div className='py-4 px-6 flex items-center flex-col md:flex-row gap-5 w-full md:w-1/2'>
