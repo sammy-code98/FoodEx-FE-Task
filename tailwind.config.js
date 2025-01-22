@@ -11,6 +11,10 @@ export default {
         "chow-snow": "#FFF8F2",
         "chow-blue": "#5F63E1",
       },
+      fontFamily: {
+        sofia: ["Sofia Sans", "serif"],
+        courgette: ["Courgette", "serif"],
+      },
     },
   },
   plugins: [],
