@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+#food-carousel {
+  overflow: hidden;
+  scroll-snap-type: x mandatory;
+}
+
+#food-carousel > div {
+  scroll-snap-align: center;
+}

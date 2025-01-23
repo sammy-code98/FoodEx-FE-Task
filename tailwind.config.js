@@ -10,6 +10,14 @@ export default {
         "chow-orange": "#D87023",
         "chow-snow": "#FFF8F2",
         "chow-blue": "#5F63E1",
+        "chow-brown": {
+          dark: "#49280F",
+          light: "#D6D5CA",
+        },
+      },
+      fontFamily: {
+        sofia: ["Sofia Sans", "serif"],
+        courgette: ["Courgette", "serif"],
       },
     },
   },
