@@ -1,50 +1,76 @@
-# React + TypeScript + Vite
+# FoodEx Frontend Developer (Mid-Level) Test
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is built as part of a technical interview test for a Frontend Developer (Mid-Level) position. It demonstrates the use of modern frontend technologies (ReactJs,Typescript,Tailwind Css ) to create an interactive, responsive, and scalable web application. The project adheres to best practices in code organization, component-based architecture, and performance optimization.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Demo
+[FoodExTestDemo](https://samuel-uzor-foodex-task.vercel.app/)
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Features
+- Responsive design for various screen sizes
+- Carousel/slider component
+- Type check for props
+- Meta and image alt attributes for SEO optimaztion
+- Lazy load components for Performance Optimization
 
-- Configure the top-level `parserOptions` property like this:
+## Technologies Used
+- **React.js:** For building the user interface.
+- **TypeScript:** Ensuring type safety and reducing runtime errors.
+- **Tailwind CSS:** Utility-first CSS framework for styling.
+- **Vite:** For a fast and optimized development experience 
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+
+## Run Locally
+
+Clone Project Repo 👍
+
+```bash
+   git clone https://github.com/sammy-code98/FoodEx-FE-Task 
+   ```
+
+Navigate to Project Directory
+```bash
+cd  project-name
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Install dependencies 
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+```bash
+  yarn install
+  ```
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+  Start the Development Server
+
+  ```bash
+  yarn dev
+  ```
+
+  The application will run locally on `http://localhost:5173/`
+
+## Project Structure
+```bash
+├── public              # Static files (images, etc.)
+├── src
+│   ├── assets          # Images, fonts, etc.
+│   ├── components      # Reusable components
+│   ├── styles/index.css          # Global and module CSS files
+│   ├── App.tsx         # Root component
+│   ├── main.tsx        # Entry point
+│   └── utils           # TypeScript interfaces/types and static data
+├── package.json        # Project configuration and dependencies
+├── README.md           # Project documentation
+└── .gitignore          # Files to be ignored by Git
+Etc...
+
 ```
+
+
+
+## Author
+
+Uzor Samuel
+
+Frontend Engineer
+
+[LinkedIn](https://www.linkedin.com/in/samuel-uzor98/) || [Github](https://github.com/sammy-code98)
