@@ -2,14 +2,11 @@ import Hero from "./components/Hero"
 import Waitlist from "./components/Waitlist"
 
 function App() {
-
   return (
     <>
       <Hero />
       <Waitlist />
-
       <div className="px-6">
-
         <div className="px-12 py-6 mb-12 mx-auto container bg-chow-white rounded-3xl shadow-xl flex flex-col md:flex-row justify-start md:justify-between md:items-center gap-6">
         <div className="w-full md:w-5/12">
           <h3 className="text-3xl font-semibold font-sofia text-chow-black leading-loose ">Signup  to {" "}

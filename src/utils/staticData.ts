@@ -26,14 +26,4 @@ export const cardData: cardDataProps[] = [
     foodName: "Souse Fries & Bacon",
     foodImage: food2,
   },
-  // {
-  //   id: 6,
-  //   foodName: "Ghana Jollof",
-  //   foodImage: food3,
-  // },
-  // {
-  //   id: 7,
-  //   foodName: "Ofada Rice",
-  //   foodImage: food1,
-  // },
 ];

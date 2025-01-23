@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-// import Card from "../Card"
+import Carousel from "../Card/Carousel"
 import appLogo from "../../assets/appLogo.svg"
 import instagram from "../../assets/icons/instagram.png"
 import facebook from "../../assets/icons/facebook.png"
@@ -8,10 +8,7 @@ import whiteStar from "../../assets/icons/white-star.svg"
 import heroPattern from "../../assets/hero-pattern.png"
 import hamburger from "../../assets/harmbuger.svg"
 import mobileLogo from "../../assets/mobileLogo.svg"
-// import { cardData } from "../../utils/staticData"
-// import Carousel from "../Card/Carousel"
 import phoneImg from "../../assets/phone.svg"
-import Carousel from "../Card/Carousel"
 import { cardData } from "../../utils/staticData"
 
 
@@ -105,8 +102,8 @@ export default function Hero(): JSX.Element {
             </div>
           </div>
 
-          <div className="absolute right-1/4 transform translate-x-1/2  z-10 md:w-1/3 w-1/2">
-            <img src={phoneImg} alt="phone" className="w-1/2 object-contain" />
+          <div className="absolute right-1/4 bottom-0 transform translate-x-1/4 md:translate-x-1/2   z-10 md:w-1/3 w-1/2">
+            <img src={phoneImg} alt="phone" className="w-full md:w-1/2 object-contain" />
           </div>
 
           <div className="hidden md:block absolute bottom-32 z-0">
@@ -116,11 +113,8 @@ export default function Hero(): JSX.Element {
           <div className="overflow-hidden relative z-0">
             <Carousel cardData={cardData} />
           </div>
-
-
         </div>
       </div>
-
     </div >
   )
 }
