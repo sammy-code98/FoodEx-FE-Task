@@ -42,33 +42,55 @@ export default function Hero(): JSX.Element {
         </nav>
 
         {menuOpen && (
-          <nav className="px-4 py-6 flex flex-col  justify-start space-y-3 lg:hidden">
+          <nav className="px-4 py-6 flex flex-col  justify-start space-y-6 lg:hidden">
             <ul className='space-y-6'>
               <li className='text-base font-medium font-sofia text-chow-black cursor-pointer'>
                 <span className='bg-chow-orange px-0.5 py-3 rounded mr-4'></span>
                 Home
               </li>
             </ul>
+            <div className='flex items-center gap-2'>
+              <a href="/">
+                <img src={facebook} alt="facebook" />
+              </a>
+              <a href="/">
+                <img src={twitter} alt="twitter" />
+              </a>
+              <a href="/">
+                <img src={instagram} alt="instagram" />
+              </a>
+            </div>
           </nav>
         )}
       </div>
       <div className='grid grid-cols-1 md:grid-cols-8 gap-4'>
 
         <div className='space-y-6 hidden md:block'>
-          <img src={appLogo} alt="appLogo" className="cursor-pointer" />
+          <a href="/">
+            <img src={appLogo} alt="appLogo" />
+          </a>
           <div className='py-8'>
             <ul className='space-y-6'>
               <li className='text-base font-medium font-sofia text-chow-black cursor-pointer'>
+                <a href="/">
                 <span className='bg-chow-orange px-0.5 py-3 rounded mr-4'></span>
-                Home</li>
+                  Home
+                </a>
+              </li>
               <li className='text-base font-medium font-sofia text-chow-black cursor-pointer px-4'>Join Waitlist</li>
             </ul>
           </div>
 
           <div className='flex items-center gap-2'>
-            <img src={facebook} alt="facebook" className='cursor-pointer' />
-            <img src={twitter} alt="twitter" className='cursor-pointer' />
-            <img src={instagram} alt="instagram" className='cursor-pointer' />
+            <a href="/">
+              <img src={facebook} alt="facebook" />
+            </a>
+            <a href="/">
+              <img src={twitter} alt="twitter" />
+            </a>
+            <a href="/">
+              <img src={instagram} alt="instagram" />
+            </a>
           </div>
 
           <div className='absolute bottom-0'>
