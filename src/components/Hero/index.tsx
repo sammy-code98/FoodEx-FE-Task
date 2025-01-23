@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+// import Card from "../Card"
 import appLogo from "../../assets/appLogo.svg"
 import instagram from "../../assets/icons/instagram.png"
 import facebook from "../../assets/icons/facebook.png"
@@ -7,6 +8,12 @@ import whiteStar from "../../assets/icons/white-star.svg"
 import heroPattern from "../../assets/hero-pattern.png"
 import hamburger from "../../assets/harmbuger.svg"
 import mobileLogo from "../../assets/mobileLogo.svg"
+// import { cardData } from "../../utils/staticData"
+// import Carousel from "../Card/Carousel"
+import phoneImg from "../../assets/phone.svg"
+import Carousel from "../Card/Carousel"
+import { cardData } from "../../utils/staticData"
+
 
 export default function Hero(): JSX.Element {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
@@ -71,7 +78,9 @@ export default function Hero(): JSX.Element {
             <img src={heroPattern} alt="hero-pattern" className='w-full object-cover' />
           </div>
         </div>
-        <div className='md:col-start-2 col-span-12 md:col-span-7 bg-chow-black w-full rounded-xl md:rounded-3xl py-6 space-y-12'>
+
+
+        <div className='md:col-start-2 col-span-12 md:col-span-7 bg-chow-black w-full rounded-xl md:rounded-3xl py-6 space-y-12 relative'>
 
           <div className='flex flex-col justify-center items-center py-14 space-y-8'>
             <div className='flex items-center gap-3'>
@@ -80,7 +89,7 @@ export default function Hero(): JSX.Element {
               <img src={whiteStar} alt="whiteStar" />
             </div>
 
-            <h1 className='text-5xl md:text-7xl font-semibold text-chow-white'>Find chow, {" "}
+            <h1 className='text-5xl md:text-7xl font-semibold text-chow-white text-center'>Find chow, {" "}
               <span
                 className="text-chow-green font-courgette relative after:absolute after:left-0 after:bottom-0 after:h-1 after:w-full after:bg-chow-orange after:rounded-full"
                 style={{ display: "inline-block", position: "relative" }}
@@ -96,9 +105,19 @@ export default function Hero(): JSX.Element {
             </div>
           </div>
 
-          <div className=''>
-            <div className='w-[368px] h-[368px] p-4 rounded-full border-4 border-chow-orange'></div>
+          <div className="absolute right-1/4 transform translate-x-1/2  z-10 md:w-1/3 w-1/2">
+            <img src={phoneImg} alt="phone" className="w-1/2 object-contain" />
           </div>
+
+          <div className="hidden md:block absolute bottom-32 z-0">
+            <div className="w-[368px] h-[368px] p-4 rounded-full border-4 border-chow-orange"></div>
+          </div>
+
+          <div className="overflow-hidden relative z-0">
+            <Carousel cardData={cardData} />
+          </div>
+
+
         </div>
       </div>
 
